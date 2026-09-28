@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sama Tours</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <style>
+    
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .hero {
+        background: url("assets/pics/hero-samara.webp") center/cover no-repeat;
+        height: 100vh;
+        color: white;
+        position: relative;
+    }
+
+    
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .tour-img {
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      z-index: 999;
+      text-decoration: none;
+    }
+  
+  .hero {
+  height: 100vh;
+  background-image: url("../assets/pics/hero-samara.webp");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}                   
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.45);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hero-title {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  color: #f1f1f1;
+  font-size: 1.2rem;
+}
+
+.qr-box {
+  background: white;
+  display: inline-block;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.qr-text {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.qr-img {
+  width: 150px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero-overlay">
+    <div class="hero-content container text-center">
+      <h1 class="hero-title">Sama Tours</h1>
+      <p class="hero-subtitle">Horse Riding • Fishing • Snorkeling • ATV • Whales</p>
+
+      <!-- QR CODE -->
+       <div class="qr-box mt-4">
+       <p class="qr-text">Scan & Book</p>
+       <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://samatours.netlify.app/" 
+       alt="Website QR Code" 
+       class="qr-img">
+</div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- TOURS -->
+<section class="container my-5">
+
+  <div class="row g-4">
+
+    <!-- Horse Riding -->
+    <div class="col-md-6">
+      <div class="card shadow">
+        <img src="assets/pics/horse.jpg" class="tour-img card-img-top" alt="Horse Riding Samara">
+        <div class="card-body">
+          <h5 class="card-title">Horse Riding on the Beach</h5>
+          <p class="card-text">Ride horses along the beach during sunset. Peaceful, natural and unforgettable.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fishing -->
+    <div class="col-md-6">
+      <div class="card shadow">
+        <img src="assets/pics/fishing.jpg" class="tour-img card-img-top" alt="Fishing Tour Samara">
+        <div class="card-body">
+          <h5 class="card-title">Fishing Tour</h5>
+          <p class="card-text">Experience real Costa Rican fishing with local guides and stunning ocean views.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Snorkeling -->
+    <div class="col-md-6">
+      <div class="card shadow">
+        <img src="assets/pics/snorking.jpg" class="tour-img card-img-top" alt="Snorkeling Samara">
+        <div class="card-body">
+          <h5 class="card-title">Snorkeling Adventure</h5>
+          <p class="card-text">Discover marine life in crystal clear waters near Samara.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ATV -->
+    <div class="col-md-6">
+      <div class="card shadow">
+        <img src="assets/pics/atv.webp" class="tour-img card-img-top" alt="ATV Tour Samara">
+        <div class="card-body">
+          <h5 class="card-title">ATV Adventure</h5>
+          <p class="card-text">Explore jungle trails, rivers and viewpoints with powerful ATVs.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Whales -->
+    <div class="col-md-12">
+      <div class="card shadow">
+        <img src="assets/pics/whale.webp" class="tour-img card-img-top" alt="Whale Watching Samara">
+        <div class="card-body">
+          <h5 class="card-title">Whale & Dolphin Watching</h5>
+          <p class="card-text">See whales and dolphins in their natural habitat with expert guides.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WhatsApp Floating--> 
+<a href="https://wa.me/50671878122" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+  <i class="bi bi-whatsapp"></i> 
+</a>
+
+<footer class="text-center py-3 mt-5" style="background-color: #a00000; font-style:italic; color: white;">
+Diseno asistido por la I.A. <br>
+Autor y responsable editorial: G.B.H. <br>
+© 2025–2026 Sama Tours Inc.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sámara Beach Tours | Costa Rica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font (clean & pro) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (WhatsApp icon) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+      url('hero.jpg') center/cover no-repeat;
+      color: white;
+      padding: 120px 20px;
+      text-align: center;
+    }
+    .tour-card img {
+      height: 220px;
+      object-fit: cover;
+    }
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      z-index: 999;
+      text-decoration: none;
+    }
+    .qr-box img {
+      max-width: 180px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1 class="fw-bold">Unforgettable Tours in Sámara</h1>
+  <p class="lead mt-3">Explore Costa Rica with local guides</p>
+  <a href="#tours" class="btn btn-light btn-lg mt-4">View Tours</a>
+</section>
+
+<!-- TOURS -->
+<section id="tours" class="container py-5">
+  <h2 class="text-center fw-bold mb-5">Our Tours</h2>
+
+  <div class="row g-4">
+
+    <!-- HORSE RIDING -->
+    <div class="col-md-4">
+      <div class="card tour-card">
+        <img src="horse.jpg" class="card-img-top" alt="Horse Riding">
+        <div class="card-body">
+          <h5 class="card-title">Horse Riding Tour</h5>
+          <p class="card-text">Ride horses on the beach and enjoy breathtaking sunsets.</p>
+          <a href="https://wa.me/XXXXXXXXXX" class="btn btn-success w-100">
+            Book via WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FISHING -->
+    <div class="col-md-4">
+      <div class="card tour-card">
+        <img src="fishing.jpg" class="card-img-top" alt="Fishing Tour">
+        <div class="card-body">
+          <h5 class="card-title">Fishing Adventure</h5>
+          <p class="card-text">Deep sea and coastal fishing with experienced captains.</p>
+          <a href="https://wa.me/XXXXXXXXXX" class="btn btn-success w-100">
+            Book via WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SNORKELING -->
+    <div class="col-md-4">
+      <div class="card tour-card">
+        <img src="snorkeling.jpg" class="card-img-top" alt="Snorkeling">
+        <div class="card-body">
+          <h5 class="card-title">Snorkeling Tour</h5>
+          <p class="card-text">Discover colorful marine life in crystal clear waters.</p>
+          <a href="https://wa.me/XXXXXXXXXX" class="btn btn-success w-100">
+            Book via WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ATV -->
+    <div class="col-md-4">
+      <div class="card tour-card">
+        <img src="atv.jpg" class="card-img-top" alt="ATV Tour">
+        <div class="card-body">
+          <h5 class="card-title">ATV Adventure</h5>
+          <p class="card-text">Off-road adventure through jungle and local landscapes.</p>
+          <a href="https://wa.me/XXXXXXXXXX" class="btn btn-success w-100">
+            Book via WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHALES -->
+    <div class="col-md-4">
+      <div class="card tour-card">
+        <img src="whales.jpg" class="card-img-top" alt="Whales and Dolphins">
+        <div class="card-body">
+          <h5 class="card-title">Whale & Dolphin Watching</h5>
+          <p class="card-text">See whales and dolphins in their natural habitat.</p>
+          <a href="https://wa.me/XXXXXXXXXX" class="btn btn-success w-100">
+            Book via WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="bg-light py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Why Choose Us?</h2>
+    <div class="row">
+      <div class="col-md-3">✔ Local Guides</div>
+      <div class="col-md-3">✔ Safe & Friendly</div>
+      <div class="col-md-3">✔ Best Prices</div>
+      <div class="col-md-3">✔ Real Costa Rica Experience</div>
+    </div>
+  </div>
+</section>
+
+<!-- QR + CONTACT -->
+<section class="container py-5 text-center qr-box">
+  <h2 class="fw-bold mb-3">Scan & Book Instantly</h2>
+  <p>Chat with us directly on WhatsApp</p>
+  <img src="qr.png" alt="QR Code">
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center py-4">
+  <p class="mb-1">Sámara Beach Tours © 2026</p>
+  <p class="small">Powered by local guides in Costa Rica</p>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/XXXXXXXXXX" class="whatsapp-btn">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>

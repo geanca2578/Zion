@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geancarlo Beggerstaff Hay - Resume </title>
+    <title>Geancarlo Beggerstaff Hay - Resume</title>
+
     <style>
         * {
             margin: 0;
@@ -13,34 +14,51 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
             background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
         }
 
         .container {
             max-width: 900px;
             margin: 40px auto;
-            background: white;
+            background: #ffffff;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
 
+        /* HEADER */
         .header {
             background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
             color: white;
-            padding: 60px 40px;
+            padding: 50px 40px;
             text-align: center;
         }
 
+        .profile-photo {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 20px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid white;
+            background: #ddd;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 2.4em;
+            margin-bottom: 8px;
             font-weight: bold;
         }
 
         .header .subtitle {
             font-size: 1.1em;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             opacity: 0.95;
         }
 
@@ -48,20 +66,16 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 18px;
             font-size: 0.95em;
         }
 
         .contact-info a {
             color: white;
             text-decoration: none;
-            transition: opacity 0.3s;
         }
 
-        .contact-info a:hover {
-            opacity: 0.8;
-        }
-
+        /* CONTENT */
         .content {
             padding: 40px;
         }
@@ -71,30 +85,28 @@
         }
 
         .section-title {
+            font-size: 1.7em;
             color: #0072ff;
-            font-size: 1.8em;
             margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 3px solid #0072ff;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
         .profile-text {
-            color: #555;
             font-size: 1.05em;
+            color: #555;
             line-height: 1.8;
         }
 
+        /* EXPERIENCE */
         .job {
             margin-bottom: 30px;
         }
 
         .job-title {
-            color: #0056b3;
             font-size: 1.2em;
             font-weight: bold;
+            color: #0056b3;
             margin-bottom: 8px;
         }
 
@@ -105,201 +117,184 @@
             line-height: 1.7;
         }
 
+        /* EDUCATION */
         .education-item {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .education-item strong {
             color: #0056b3;
         }
 
-        .subsection-title {
-            color: #0056b3;
-            font-size: 1.3em;
-            margin: 25px 0 15px 0;
-            font-weight: bold;
-        }
-
-        .cert-list {
-            list-style: none;
-        }
-
-        .cert-list li {
-            padding: 10px 0 10px 35px;
-            position: relative;
-            color: #555;
-        }
-
-        .cert-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 10px;
-            color: #0072ff;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-
-        .cert-list li.in-progress:before {
-            content: "⏳";
-        }
-
-        .in-progress-text {
-            color: #ff0000;
-            font-style: italic;
-        }
-
+        /* SKILLS */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
             margin-top: 20px;
         }
 
-        .skill-category {
+        .skill-box {
             background: #f8f9fa;
             padding: 20px;
             border-radius: 8px;
             border-left: 4px solid #0072ff;
         }
 
-        .skill-category h4 {
+        .skill-box h4 {
             color: #0056b3;
             margin-bottom: 10px;
             font-size: 1.1em;
         }
 
-        .skill-category p {
+        .skill-box p {
             color: #666;
             font-size: 0.95em;
             line-height: 1.6;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .header {
+                padding: 40px 20px;
+            }
+
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
 
         @media print {
             body {
                 background: white;
             }
+
             .container {
                 box-shadow: none;
                 margin: 0;
             }
         }
-
-        @media (max-width: 768px) {
-            .header {
-                padding: 40px 20px;
-            }
-            .header h1 {
-                font-size: 2em;
-            }
-            .content {
-                padding: 20px;
-            }
-            .contact-info {
-                flex-direction: column;
-                gap: 10px;
-            }
-        }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1>Geancarlo Beggerstaff Hay</h1>
-            <p class="subtitle">Tour & Hospitality Specialist | Adventure & Water Sports | Customer Experience</p>
-            <div class="contact-info">
-                <span>Email: <a href="mailto:geanca@gmail.com">geanca@gmail.com</a></span>
-                <span>Phone: <a href="tel:+50671878122">+506 7187 8122</a></span>
-                <span>Location: Playa Samara, Guanacaste, Costa Rica</span>
-                <span>LinkedIn: <a href="https://www.linkedin.com/in/geancarlo-beggerstaff-hay-0bbbb7388/" target="_blank" rel="noopener">linkedin.com/in/geancarlo-beggerstaff-hay</a></span>
-                <span>GitHub: <a href="https://github.com/Geanca47" target="_blank" rel="noopener">github.com/Geanca47</a></span>
-            </div>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+
+        <!-- PROFILE PHOTO -->
+        <div class="profile-photo">
+            <img src="" alt="Profile Photo">
         </div>
 
-        <!-- Content -->
-        <div class="content">
-            <!-- Professional Profile -->
-            <section class="section">
-                <h2 class="section-title">Professional Profile</h2>
-                <p class="profile-text">
-                    Experienced in tourism, adventure activities, and hospitality. Skilled in guiding tourists, organizing water sports and beach tours, and delivering excellent customer experiences. Bilingual in English and Spanish with proven ability to communicate, sell tours, and adapt to diverse environments. Motivated to provide memorable experiences for visitors and grow in the tourism and hospitality sector.
-                </p>
-            </section>
+        <h1>Geancarlo Beggerstaff Hay</h1>
+        <p class="subtitle">Hospitality & Guest Service | Front Desk • Concierge • Customer Experience</p>
 
-            <!-- Work Experience -->
-            <section class="section">
-                <h2 class="section-title">Work Experience</h2>
-                
-                <div class="job">
-                    <h3 class="job-title">Adventure & Water Sports Guide – AquaSport, Playa Hermosa, Guanacaste (2000–2006)</h3>
-                    <p class="job-description">
-                        Guided tourists in surfing, banana boat, snorkeling, and other water activities. Provided excellent customer service, managed bookings, ensured safety protocols, and coordinated tours effectively.
-                    </p>
-                </div>
-
-                <div class="job">
-                    <h3 class="job-title">Sales & Customer Service – Baires Group (2002–2006)</h3>
-                    <p class="job-description">
-                        Managed client relations, handled telemarketing, customer inquiries, and problem resolution for an online pharmacy.
-                    </p>
-                </div>
-
-                <div class="job">
-                    <h3 class="job-title">Technical & Customer Support – Various Companies (2006–2024)</h3>
-                    <p class="job-description">
-                        Provided technical support, troubleshooting, and customer service across multiple platforms. Experience includes handling escalations, documenting cases, and prioritizing incidents efficiently. Technical background enhances problem-solving in hospitality operations.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Education & Certifications -->
-            <section class="section">
-                <h2 class="section-title">Education & Certifications</h2>
-                
-                <h3 class="subsection-title">Education</h3>
-                <div class="education-item"><strong>Elementary</strong> – Escuela Republica del Peru</div>
-                <div class="education-item"><strong>High School</strong> – Centro Educativo Bilingue Adventista</div>
-                <div class="education-item"><strong>Systems Engineering</strong> – Universidad Latina (still pending)</div>
-
-                <h3 class="subsection-title">Key Certifications</h3>
-                <ul class="cert-list">
-                    <li>Water Safety & First Aid – (In progress)</li>
-                    <li>Adventure Tourism & Tour Management – (In progress)</li>
-                    <li>Web Development – Latam Challenge (2025)</li>
-                    <li>Cisco Systems CCNA1 – Universidad Juan Pablo II (2023)</li>
-                    <li>Full Stack Web Development – LinkedIn (2022)</li>
-                    <li>Python Programming – Cisco Systems <span class="in-progress-text">(In progress)</span></li>
-                    <li>Microsoft Data Analysis – Microsoft <span class="in-progress-text">(In progress)</span></li>
-                </ul>
-            </section>
-
-            <!-- Skills -->
-            <section class="section">
-                <h2 class="section-title">Tour & Hospitality Skills</h2>
-                
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4>Tour & Guest Management</h4>
-                        <p>Booking coordination, scheduling tours, guiding tourists, handling complaints and inquiries.</p>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h4>Water Sports & Adventure</h4>
-                        <p>Surfing, Banana Boat, Snorkeling, Kayaking, Stand-Up Paddle.</p>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h4>Customer Experience</h4>
-                        <p>Multilingual communication (English/Spanish), customer engagement, sales and upselling tours.</p>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h4>Other Tools</h4>
-                        <p>CRM systems, booking platforms, Microsoft Office Suite, basic IT troubleshooting for hospitality operations.</p>
-                    </div>
-                </div>
-            </section>
+        <div class="contact-info">
+            <span>Email: <a href="mailto:geanca@gmail.com">geanca@gmail.com</a></span>
+            <span>Phone: <a href="tel:+50671878122">+506 7187 8122</a></span>
+            <span>Location: Playa Samara, Guanacaste, Costa Rica</span>
+            <span>LinkedIn: <a href="https://www.linkedin.com/in/geancarlo-beggerstaff-hay-0bbbb7388/" target="_blank">linkedin.com/in/geancarlo-beggerstaff-hay</a></span>
         </div>
     </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <!-- PROFILE -->
+        <section class="section">
+            <h2 class="section-title">Professional Profile</h2>
+            <p class="profile-text">
+                Friendly and reliable hospitality professional with experience in customer service, tourism support,
+                and guest assistance in beach destinations. Bilingual in English and Spanish, with strong communication
+                skills and a service-oriented attitude. Comfortable assisting guests, handling inquiries, coordinating
+                services, and contributing to a welcoming front desk environment.
+            </p>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="section">
+            <h2 class="section-title">Work Experience</h2>
+
+            <div class="job">
+                <div class="job-title">Tourism & Guest Support – Playa Hermosa, Guanacaste (2000–2006)</div>
+                <div class="job-description">
+                    Assisted tourists with activity coordination, guest orientation, and general customer service in a
+                    beach environment. Provided information, supported bookings, and ensured positive guest experiences.
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-title">Sales & Customer Service Representative – Baires Group (2002–2006)</div>
+                <div class="job-description">
+                    Handled customer inquiries, order support, and problem resolution. Developed strong communication
+                    skills, customer care, and service professionalism.
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-title">Customer Support & Technical Assistance – Various Companies (2006–2024)</div>
+                <div class="job-description">
+                    Provided customer support for international clients, managing requests, resolving issues, and
+                    maintaining clear communication. Experience working under pressure while delivering quality service.
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="section">
+            <h2 class="section-title">Education</h2>
+
+            <div class="education-item"><strong>Elementary School</strong> – Escuela República del Perú</div>
+            <div class="education-item"><strong>High School</strong> – Centro Educativo Bilingüe Adventista</div>
+            <div class="education-item"><strong>Systems Engineering</strong> – Universidad Latina (incomplete)</div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="section">
+            <h2 class="section-title">Key Skills</h2>
+
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <h4>Front Desk & Guest Services</h4>
+                    <p>Guest assistance, check-in support, answering inquiries, coordinating services, and providing a welcoming experience.</p>
+                </div>
+
+                <div class="skill-box">
+                    <h4>Customer Experience</h4>
+                    <p>Bilingual communication (English/Spanish), problem-solving, professionalism, and service mindset.</p>
+                </div>
+
+                <div class="skill-box">
+                    <h4>Tourism & Hospitality Support</h4>
+                    <p>Tour information, scheduling support, guest orientation, and local recommendations.</p>
+                </div>
+
+                <div class="skill-box">
+                    <h4>Technical & Office Skills</h4>
+                    <p>Microsoft Office, basic IT support, online systems, CRM familiarity, and administrative tasks.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>
+
 </body>
 </html>

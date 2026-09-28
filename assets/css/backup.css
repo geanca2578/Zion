@@ -12,10 +12,19 @@ body {
 /* =================================================
    NAVBAR
    ================================================= */
+
+
 .navbar-custom {
   background-color: #c00;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding-top: 0 !important;    /* Elimina el espacio vacío de arriba */
+  padding-bottom: 0 !important; /* Elimina el espacio vacío de abajo */
+  height: 56px;                 /* Fija el alto total de la franja roja */
+  display: flex;                /* Alinea perfectamente los elementos internos */
+  align-items: center;
 }
+
+
 
 .navbar-brand {
   font-weight: bold;
@@ -35,10 +44,11 @@ body {
 }
 
 .tesseract-navbar {
-  width: 36px;
+  height: 56px;           /* Hace que mida exactamente lo mismo que la franja */
+  width: auto;            /* Evita que el GIF se distorsione o se ponga estirado */
   vertical-align: middle;
-  margin-right: 6px;
-  opacity: 0.85;
+  margin: 0;              /* Eliminamos márgenes para que pegue de borde a borde */
+  opacity: 1;             /* Brillo al 100% para que resalte la iluminación */
 }
 
 /* =================================================
@@ -271,3 +281,32 @@ body {
     border-radius: 18px;
   }
 }
+
+
+
+/* ================================================================= */
+/* 👑 CONTENEDOR DE BOTONES CLARO PREMIUM (GBH CORP & GENESIS)       */
+/* ================================================================= */
+.trinity-btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px !important;
+  background-color: #fdfbf7 !important; /* Reemplaza el negro por el lino claro */
+  border-top: 1px solid #ebdcd5 !important; /* Borde pergamino sutil */
+  margin-top: auto; /* Fuerza los botones a alinearse al fondo */
+}
+
+/* 🧭 ADAPTACIÓN RESPONSIVA SEPARADA Y COMPILADA EN VERDE */
+@media (min-width: 576px) {
+  .trinity-btn-container {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-carmesi-moderno {
+    flex: 1 1 28%;
+    min-width: 100px;
+  }
+}
+
